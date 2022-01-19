@@ -1,0 +1,26 @@
+{
+  "name": "raffle-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve ./src",
+    "deploy": "gh-pages -d src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RJRCH123/Raffle-page.git"
+  },
+  "keywords": [],
+  "author": "Rosamaria Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RJRCH123/Raffle-page/issues"
+  },
+  "homepage": "https://github.com/RJRCH123/Raffle-page#readme",
+  "dependencies": {
+    "gh-pages": "^3.2.3",
+    "serve": "^13.0.2"
+  }
+}
