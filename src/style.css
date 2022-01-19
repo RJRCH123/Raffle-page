@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2b88f0;
+  font-family: 'Muli', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  /* margin: 0; */
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0% 0%;
+  grid-auto-flow: row;
+  justify-content: space-between;
+  align-content: space-evenly;
+  justify-items: stretch;
+  align-items: start;
+  grid-template-areas:
+    "instructions raffleContainer";
+}
+
+.instructions {
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: instructions;
+}
+
+.raffleContainer {
+  align-self: stretch;
+  grid-area: raffleContainer;
+  margin: 8%;
+}
+
+h2 {
+  color: #fff;
+  margin: 10px 0 20px;
+  text-align: center;
+}
+
+ol {
+  color: #fff;
+}
+
+/* .container {
+  width: 100%;
+} */
+
+textarea {
+  border: none;
+  display: block;
+  width: 100%;
+  height: 50%;
+  font-family: inherit;
+  padding: 5%;
+  margin: 5%;
+  font-size: small;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+#tags {
+  margin: 8%;
+  text-align: center;
+}
+
+.tag {
+  background-color: #f0932b;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin: 0 5px 10px 0;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.tag.highlight {
+  background-color: #273c75;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
