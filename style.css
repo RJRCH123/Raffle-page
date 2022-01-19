@@ -11,13 +11,20 @@ body {
   background-size: cover;
   font-family: 'Muli', sans-serif;
   height: 100vh;
-  overflow: hidden;
+  overflow: visible;
   /* margin: 0; */
   display: flex;
   /* width: 100%; */
   align-items: center;
   justify-content: center;
   align-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
 }
 
 .container {  
@@ -169,5 +176,9 @@ textarea:focus {
   }
   .arrow_box {
     margin: 10% 5% 0 5%;
+  }
+  body {
+    height: 100%;
+    /* width: 100%; */
   }
 }
