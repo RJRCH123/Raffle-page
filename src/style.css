@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #2b88f0;
+  /* background-color: #2b88f0; */
+  background-image: url(img/walpaper4.jpg);
+  background-size: cover;
   font-family: 'Muli', sans-serif;
   height: 100vh;
   overflow: hidden;
   /* margin: 0; */
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   align-items: center;
   justify-content: center;
+  align-content: center;
 }
 
 .container {  
@@ -21,7 +25,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-auto-columns: 1fr;
-  gap: 0% 0%;
+  gap: 0% 10%;
   grid-auto-flow: row;
   justify-content: space-between;
   align-content: space-evenly;
@@ -29,6 +33,9 @@ body {
   align-items: start;
   grid-template-areas:
     "instructions raffleContainer";
+  background-color: #000000db;
+  padding: 5%;
+  border-radius: 20px;
 }
 
 .instructions {
@@ -40,7 +47,19 @@ body {
 .raffleContainer {
   align-self: stretch;
   grid-area: raffleContainer;
-  margin: 8%;
+  /* margin: 8%; */
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Lobster Two', cursive;
+  background-image: linear-gradient(
+    45deg, #a5b97b, #fa6961);
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 h2 {
@@ -51,20 +70,32 @@ h2 {
 
 ol {
   color: #fff;
+  margin: 5%;
 }
 
 /* .container {
   width: 100%;
 } */
 
+.welcomeBox {
+  text-align: center;
+}
+
+.flexBoxImgs {
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+
 textarea {
   border: none;
   display: block;
   width: 100%;
-  height: 50%;
+  border-radius: 15px;
+  /* height: 50%; */
   font-family: inherit;
   padding: 5%;
-  margin: 5%;
+  /* margin: 5%; */
   font-size: small;
 }
 
@@ -73,7 +104,7 @@ textarea:focus {
 }
 
 #tags {
-  margin: 8%;
+  margin-top: 8%;
   text-align: center;
 }
 
@@ -91,9 +122,52 @@ textarea:focus {
   background-color: #273c75;
 }
 
+.arrow_box {
+  position: relative;
+  border-radius: 20px;
+  /* padding: 5%; */
+  font-size: small;
+  text-align: center;
+  background: #00000000;
+  /* border: 4px solid #842f2a; */
+  border: 4px solid #a5b97b;
+  margin: 0 5%;
+  /* margin: 10% 5% 0 5%; */
+}
+.arrow_box:after, 
+.arrow_box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(136, 183, 213, 0);
+  border-top-color: black;
+	border-width: 30px;
+	margin-left: -30px;
+}
+.arrow_box:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-top-color: #a5b97b;
+	border-width: 36px;
+	margin-left: -36px;
+}
+
 @media (max-width: 768px) {
   .container {
     display: flex;
     flex-direction: column;
+  }
+  .raffleContainer {
+    margin: 8%;
+  }
+  .arrow_box {
+    margin: 10% 5% 0 5%;
   }
 }

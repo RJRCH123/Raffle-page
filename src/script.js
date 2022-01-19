@@ -1,21 +1,21 @@
 const tagsEl = document.getElementById('tags')
-const textareaTags = document.getElementById('textareaTags')
+const textarea = document.getElementById('textarea')
 
-textareaTags.focus()
+textarea.focus()
 
-textareaTags.addEventListener('keyup', (e) => {
-    addTags(e.target.value)
+textarea.addEventListener('keyup', (e) => {
+    createTags(e.target.value)
 
     if(e.key === 'Enter') {
         setTimeout(() => {
             e.target.value = ''
         }, 10)
 
-        randomTag()
+        randomSelect()
     }
 })
 
-function addTags(input) {
+function createTags(input) {
     const tags = input.split(',').filter(tag => tag.trim() !== '').map(tag => tag.trim())
     
     tagsEl.innerHTML = ''
@@ -28,7 +28,7 @@ function addTags(input) {
     })
 }
 
-function randomTag() {
+function randomSelect() {
     const times = 30
 
     const interval = setInterval(() => {
